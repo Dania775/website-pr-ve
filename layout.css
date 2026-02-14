@@ -8,56 +8,64 @@
   display: grid;
   gap: 24px;
   margin-top: 24px;
-
   grid-template-columns: 1fr;
   grid-template-areas:
-    "img1"
-    "text1"
-    "img2"
-    "text2"
-    "card3";
+    "win"
+    "mac"
+    "tab";
 }
 
-.operativsystemer .os_img1  { grid-area: img1; }
-.operativsystemer .os_text1 { grid-area: text1; }
-.operativsystemer .os_img2  { grid-area: img2; }
-.operativsystemer .os_text2 { grid-area: text2; }
-.operativsystemer .os_card3 { grid-area: card3; }
+.operativsystemer .os_win { grid-area: win; }
+.operativsystemer .os_mac { grid-area: mac; }
+.operativsystemer .os_tab { grid-area: tab; }
 
-@media (min-width: 1000px) {
-  .operativsystemer .os_grid {
-    grid-template-columns: 2fr 3fr 2fr;
-    grid-template-areas:
-      "img1  text1  card3"
-      "text2 img2   .";
-    align-items: start;
-  }
-}
-
-.operativsystemer .os_img1 img,
-.operativsystemer .os_img2 img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-  border-radius: 10px;
-}
-
-.operativsystemer .os_card3 {
+.operativsystemer .os_win,
+.operativsystemer .os_mac,
+.operativsystemer .os_tab {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.operativsystemer .os_card3 img {
+.operativsystemer img {
   width: 100%;
-  height: 180px;
-  object-fit: cover;
+  height: auto;
   display: block;
-  border-radius: 10px;
 }
 
-.operativsystemer p {
-  max-width: 65ch;
+@media (min-width: 1000px) {
+  .operativsystemer .os_grid {
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-template-areas:
+      "win win tab"
+      "mac mac .";
+    align-items: start;
+  }
+
+  .operativsystemer .os_win {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .operativsystemer .os_mac {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 24px;
+    align-items: start;
+  }
+
+  .operativsystemer .os_win > img,
+  .operativsystemer .os_mac > img {
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .operativsystemer .os_tab > img {
+    height: 180px;
+    object-fit: cover;
+  }
 }
+
 
