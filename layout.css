@@ -71,35 +71,6 @@ main img {
   }
 }
 
-.operativsystemer {
-  max-width: 1100px;
-  margin-inline: auto;
-  padding-inline: 16px;
-}
-
-.operativsystemer section {
-  margin-top: 32px;
-}
-
-.operativsystemer p {
-  max-width: 65ch;
-}
-
-.operativsystemer .grid_5-3 img,
-.operativsystemer .grid_2-3 img,
-.operativsystemer .grid_3-2 img {
-  height: 240px;
-  object-fit: cover;
-}
-
-@media (min-width: 1000px) {
-  .operativsystemer .grid_5-3 img,
-  .operativsystemer .grid_2-3 img,
-  .operativsystemer .grid_3-2 img {
-    height: 280px;
-  }
-}
-
 .galleri_grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -154,15 +125,12 @@ main img {
   display: grid;
   gap: 24px;
   margin-top: 24px;
-}
-
-.operativsystemer .os_grid {
   grid-template-columns: 1fr;
   grid-template-areas:
     "img1"
     "text1"
-    "text2"
     "img2"
+    "text2"
     "card3";
 }
 
@@ -172,11 +140,11 @@ main img {
 .operativsystemer .os_text1 {
   grid-area: text1;
 }
-.operativsystemer .os_text2 {
-  grid-area: text2;
-}
 .operativsystemer .os_img2 {
   grid-area: img2;
+}
+.operativsystemer .os_text2 {
+  grid-area: text2;
 }
 .operativsystemer .os_card3 {
   grid-area: card3;
@@ -218,4 +186,3 @@ main img {
   flex-direction: column;
   gap: 12px;
 }
-
